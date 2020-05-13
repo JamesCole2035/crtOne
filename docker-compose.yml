@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      dockerfile: docker/php/Dockerfile
+      context: .
+      args:
+        UID: ${DUID}
+        GID: ${DGID}
+    volumes:
+    - .:/var/www/app
+    environment:
+      APP_ENV: 'dev'
+      APP_DEBUG: 1
+
+  web:
+    build:
+      dockerfile: docker/nginx/Dockerfile
+      context: .
+    volumes:
+      - ./public:/var/www/app/public
+    ports:
+    - 8008:80
