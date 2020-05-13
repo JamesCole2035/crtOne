@@ -13,7 +13,8 @@ services:
     environment:
       APP_ENV: 'dev'
       APP_DEBUG: 1
-
+      APP_TARGET_UID: jamescole2035
+      APP_TARGET_GID: andreamoda
   web:
     build:
       dockerfile: docker/nginx/Dockerfile
