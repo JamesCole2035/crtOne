@@ -192,3 +192,7 @@ $ docker run -it -p 805:9000 1a19146551ec                                       
 Страница недоступна
 Сайт localhost не отправил данных.
 ERR_EMPTY_RESPONSE
+
+
+2020/05/15 11:51:25 [emerg] 1#1: host not found in upstream "app" in /etc/nginx/conf.d/default.conf:17
+nginx: [emerg] host not found in upstream "app" in /etc/nginx/conf.d/default.conf:17
